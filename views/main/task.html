@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
-    <style>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <style>
     #user-element {
       display: none;
+    }
+
+    .fit-content {
+      height: fit-content;
     }
   </style>
 </head>
@@ -13,7 +17,7 @@
 <body>
   <div class="min-h-screen">
     <nav class="bg-gray-800">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="px-4 py-6 sm:px-0">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
@@ -131,18 +135,47 @@
         </h1>
       </div>
     </header>
-    <main>
+     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <!-- Replace with your content -->
+        <!-- Task section -->
         <div class="px-4 py-6 sm:px-0">
-          <div class="border-4 border-dashed border-gray-200 rounded-lg h-96"></div>
+      	  <div class="border-4 border-dashed border-gray-200 rounded-lg h-96 fit-content">
+            <!-- Random task -->
+            <div class="p-8">
+              <h2 class="text-3xl font-bold text-gray-900">Assigned Task</h2>
+              <div class="mt-4 bg-gray-100 p-4 rounded-lg">
+                <h3 class="text-xl font-medium text-gray-900">Refactoring Codebase for Performance Optimization</h3>
+                <p class="mt-2 text-gray-600">As a software engineer, your task is to refactor an existing codebase to improve performance. The codebase in question is a complex software application that handles large amounts of data and performs various computational tasks. The goal of this task is to identify bottlenecks and inefficiencies in the code and optimize it to enhance its performance and responsiveness.</p>
+                <div class="mt-4">
+                  <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+                    Category: Performance Optimization
+                  </span>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h3 class="text-lg font-medium text-gray-900">Task Details</h3>
+                <ul class="mt-2 text-gray-600 list-disc pl-5">
+                  <li>Perform a thorough analysis: Start by understanding the existing codebase and its performance characteristics. Identify areas that consume significant resources, such as CPU, memory, or network operations.</li>
+                  <li>Profile the application: Utilize profiling tools to identify hotspots in the code. Determine which parts of the application are causing performance degradation or are potential candidates for optimization.</li>
+                  <li>Optimize critical sections: Focus on optimizing the identified critical sections of the codebase. This may involve algorithmic improvements, data structure modifications, or rethinking the overall design. Strive to reduce unnecessary computations, eliminate redundant operations, and minimize resource consumption.</li>
+                  <li>Measure and benchmark: After making optimizations, measure the performance improvements. Benchmark the refactored code against the original implementation to quantify the gains achieved. Ensure that the optimizations have not introduced new bugs or regressions.</li>
+                  <li>Test and iterate: Thoroughly test the refactored code to ensure its correctness and stability. Conduct stress tests, simulate real-world scenarios, and evaluate the system's behavior under various conditions. If necessary, iterate on the optimization process to further refine the codebase.</li>
+                  <li>Document the changes: Document the optimizations you have made, including the rationale behind each modification and its impact on performance. This documentation will help other developers understand the changes and maintain the codebase effectively in the future.</li>
+                </ul>
+              </div>
+              <div class="mt-8 flex justify-end">
+                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Mark as Completed
+                </a>
+              </div>
+            </div>
+            <!-- End of task -->
+          </div>
         </div>
-        <!-- /End replace -->
+        <!-- /End of section -->
       </div>
     </main>
   </div>
-
-  {{template "general/scripts"}}
 </body>
 
 </html>
